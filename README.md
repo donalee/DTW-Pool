@@ -1,7 +1,8 @@
 # Learnable Dynamic Temporal Pooling for Time Series Classification
 
 This is the author code of ["Learnable Dynamic Temporal Pooling for Time Series Classification"](https://to-be-appeared).
-We employ (and customize) the publicly availabe implementation of soft-dtw, please refer to https://github.com/Maghoumi/pytorch-softdtw-cuda.
+We employ (and customize) the fast CUDA implementation of soft-dtw (based on pytorch), publicly available at https://github.com/Maghoumi/pytorch-softdtw-cuda.
+For more details of soft-dtw, please refer to [the original paper](https://dl.acm.org/doi/10.5555/3305381.3305474) and the repository above.
 
 ## Overview
 
@@ -31,12 +32,12 @@ A CNN classifier with the DTP layer utilizes the **segment-level representation*
 
 ### STEP 3. Train the CNN classifier with the DTP layer
 
-You can simply train the CNN classifier by using the following command.
+You can simply run the code by the following command.
 ```
 python train_classifier.py
 ```
 
-The details of the classifier and its optimization can be specified by input arguments.
+You can further specify the details of the classifier and its optimization by input arguments.
 ```
 python train_classifier.py --dataset GunPoint --model fcn --pooling_op max --n_segments 4 --gamma 1.0
 ```
