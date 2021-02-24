@@ -5,7 +5,12 @@ We employ (and customize) the publicly availabe implementation of soft-dtw, plea
 
 ## Overview
 
-TO-BE-WRITTEN
+<p align="center">
+<img src="./figure/overview.png" width="900">
+</p>
+
+The global pooling layer (i.e., global average/max pooling) that has been mainly adopted by existing CNN classifiers simply aggregates all hidden vectors, whereas our **dynamic temporal pooling (DTP)** layer effectively reduces the temporal size based on semantic segmentation.
+A CNN classifier with the DTP layer utilizes the **segment-level representation** and **segment-level fully-connected layer** for its classification, which allows to extract further class-discriminative features and improves the classification accruacy.
 
 ## Running the codes
 
@@ -19,14 +24,24 @@ TO-BE-WRITTEN
 
 ### STEP 2. Download the benchmark datasets for time series classification
 
-- We provide a small univariate time series dataset, `GunPoint`, as default.
+- We provide a small univariate time series dataset, [`GunPoint`](http://www.timeseriesclassification.com/description.php?Dataset=GunPoint), as default.
 - The datatsets can be downloaded from the UCR/UEA repository: http://www.timeseriesclassification.com.
 - Place `DATASET_TRAIN.ts` and `DATASET_TEST.ts` files in `./data/Univariate/DATASET` or `./data/Multivariate/DATASET`.
 
 
 ### STEP 3. Train the CNN classifier with the DTP layer
 
+You can simply train the CNN classifier by using the following command.
 ```
 python train_classifier.py
 ```
-You can specify the details of the classifier and its optimization by input arguments
+
+The details of the classifier and its optimization can be specified by input arguments.
+```
+python train_classifier.py --dataset GunPoint --model fcn --pooling_op max --n_segments 4 --gamma 1.0
+```
+
+## Citation
+```
+TBD
+```
