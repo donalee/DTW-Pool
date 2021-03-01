@@ -1,6 +1,6 @@
 # Learnable Dynamic Temporal Pooling for Time Series Classification
 
-- This is the author code of ["Learnable Dynamic Temporal Pooling for Time Series Classification"](https://to-be-appeared).
+- This is the author code of ["Learnable Dynamic Temporal Pooling for Time Series Classification"](https://to-be-appeared), published at AAAI 2021.
 - We employ (and customize) the fast CUDA implementation of soft-dtw (based on pytorch), publicly available at https://github.com/Maghoumi/pytorch-softdtw-cuda.
 - For more details of soft-dtw, please refer to [the original paper](https://dl.acm.org/doi/10.5555/3305381.3305474) and the repository above.
 
