@@ -44,5 +44,13 @@ python train_classifier.py --dataset GunPoint --model fcn --pooling_op max --n_s
 
 ## Citation
 ```
-TBD
+@inproceedings{lee2021learnable,
+  title={Learnable Dynamic Temporal Pooling for Time Series Classification},
+  author={Lee, Dongha and Lee, Seonghyeon and Yu, Hwanjo},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={35},
+  number={9},
+  pages={8288--8296},
+  year={2021}
+}
 ```
