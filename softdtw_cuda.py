@@ -520,8 +520,8 @@ def profile(batch_size, seq_len_a, seq_len_b, dims, tol_backward):
     times_gpu = []
 
     for i in range(n_iters):
-        a_cpu = torch.rand((batch_size, seq_len_a, dims), requires_grad=True)
-        b_cpu = torch.rand((batch_size, seq_len_b, dims))
+        a_cpu = torch.rand((batch_size, dims, seq_len_a), requires_grad=True)
+        b_cpu = torch.rand((batch_size, dims, seq_len_b))
         a_gpu = a_cpu.cuda()
         b_gpu = b_cpu.cuda()
 
